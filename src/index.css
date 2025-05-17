@@ -1,0 +1,102 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 100% 97%;             /* light ivory */
+    --foreground: 25 20% 15%;              /* dark brownish black */
+
+    --card: 36 100% 97%;
+    --card-foreground: 25 20% 15%;
+
+    --primary: 32 100% 50%;                /* vibrant orange */
+    --primary-foreground: 0 0% 100%;       /* white */
+
+    --secondary: 12 90% 45%;               /* deep red-orange */
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 42 100% 60%;                 /* golden orange */
+    --accent-foreground: 25 20% 15%;
+
+    --muted: 36 100% 92%;
+    --muted-foreground: 25 15% 35%;
+
+    --border: 36 100% 85%;
+    --input: 36 100% 90%;
+    --ring: 32 100% 40%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 8%;              /* near black */
+    --foreground: 36 100% 95%;             /* warm light */
+
+    --card: 240 10% 10%;
+    --card-foreground: 36 100% 95%;
+
+    --primary: 32 100% 55%;                /* rich orange */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 12 90% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 42 100% 55%;
+    --accent-foreground: 240 10% 10%;
+
+    --muted: 240 10% 12%;
+    --muted-foreground: 36 100% 70%;
+
+    --border: 240 10% 15%;
+    --input: 240 10% 15%;
+    --ring: 32 100% 45%;
+  }
+}
+
+/* 
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+} */
+
+@layer components {
+  .recipe-container {
+    @apply p-6 rounded-lg shadow-md bg-white dark:bg-card border border-border;
+  }
+  
+  .recipe-title {
+    @apply text-2xl font-bold text-recipe-dark dark:text-recipe-accent mb-4;
+  }
+  
+  .recipe-section {
+    @apply mb-4;
+  }
+  
+  .recipe-section-title {
+    @apply text-lg font-semibold mb-2 text-recipe-secondary dark:text-recipe-accent;
+  }
+  
+  .ingredients-list {
+    @apply list-disc list-inside space-y-1 pl-2;
+  }
+  
+  .instructions-list {
+    @apply space-y-2 pl-2;
+  }
+  
+  .instruction-step {
+    @apply flex gap-2;
+  }
+  
+  .step-number {
+    @apply font-bold text-recipe-primary;
+  }
+}
