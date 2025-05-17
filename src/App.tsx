@@ -49,7 +49,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/ai-chef">
         <AuthProvider>
           <ThemeProvider>
             {/* Suspense wraps the Routes to handle loading states of lazy components */}
