@@ -64,12 +64,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				recipe: {
-					primary: '#22c55e',
-					secondary: '#16a34a',
-					accent: '#4ade80',
-					light: '#f0fdf4',
-					dark: '#166534'
+					primary: '#f97316',       // vibrant orange
+					secondary: '#ea580c',     // deeper orange
+					accent: '#fdba74',        // lighter orange for accents
+					light: '#fff7ed',         // soft orange-tinted background
+					dark: '#1f1f1f'           // dark background (almost black)
 				}
+
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
